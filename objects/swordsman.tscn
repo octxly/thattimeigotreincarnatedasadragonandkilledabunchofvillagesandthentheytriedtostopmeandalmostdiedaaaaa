@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ccc4fpdgq0eal"]
+
+[ext_resource type="Script" uid="uid://gff8iat5a35a" path="res://scripts/swordsman_move.gd" id="1_0x2k5"]
+[ext_resource type="Texture2D" uid="uid://brp18s6sr6swt" path="res://assets/spritesheet_1.png" id="2_7ocif"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 92.00543
+
+[node name="Swordsman" type="Node2D" unique_id=600984054]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1593229494]
+collision_layer = 4
+collision_mask = 7
+motion_mode = 1
+script = ExtResource("1_0x2k5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=82786636]
+position = Vector2(-18, -95)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7ocif")
+hframes = 4
+vframes = 4
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1294232155]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="Timer" type="Timer" parent="." unique_id=1791878989]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="CharacterBody2D" method="_on_timer_timeout"]
