@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dj7pp52025j7g"]
+
+[ext_resource type="Script" uid="uid://co7n1mul2kpxe" path="res://scripts/draggin.gd" id="1_ads45"]
+[ext_resource type="Texture2D" uid="uid://b8ifyomekkvxh" path="res://sophiedragon.png" id="2_shk3w"]
+
+[node name="Scene" type="Node2D" unique_id=1625255188]
+position = Vector2(528, 376)
+scale = Vector2(0.28111434, 0.28111434)
+
+[node name="Sprite4" type="Sprite2D" parent="." unique_id=381091053]
+position = Vector2(1469.1531, -789.71436)
+scale = Vector2(1.0000007, 1.0000007)
+texture = ExtResource("2_shk3w")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1546273560]
+position = Vector2(-1077.8531, -732.7979)
+scale = Vector2(1.0000004, 1.0000004)
+texture = ExtResource("2_shk3w")
+
+[node name="Player" type="Node2D" parent="." unique_id=1178755558]
+position = Vector2(299, -139)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Player" unique_id=600699348]
+motion_mode = 1
+script = ExtResource("1_ads45")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player/CharacterBody2D" unique_id=1605705661]
+polygon = PackedVector2Array(-747, -353, -769, 76, -1012, 361, -958, 555, -635, 555, -181, 458, 81, 462, 382, 507, 351, 150, 471, -244, 547, -246, 767, -125, 948, -347, 677, -563, -101, -527, -463, -502)
+
+[node name="Sprite" type="Sprite2D" parent="Player/CharacterBody2D" unique_id=609201887]
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("2_shk3w")
+
+[node name="Camera2D" type="Camera2D" parent="Player/CharacterBody2D" unique_id=109280981]
+position = Vector2(3.3681614, 0.26640457)
+
+[node name="Sprite2" type="Sprite2D" parent="." unique_id=978918680]
+position = Vector2(-1373.1069, 640.30884)
+scale = Vector2(1.0000013, 1.0000013)
+texture = ExtResource("2_shk3w")
+
+[node name="Sprite3" type="Sprite2D" parent="." unique_id=2051295166]
+position = Vector2(1671.9177, 505.13257)
+scale = Vector2(1.0000011, 1.0000011)
+texture = ExtResource("2_shk3w")
