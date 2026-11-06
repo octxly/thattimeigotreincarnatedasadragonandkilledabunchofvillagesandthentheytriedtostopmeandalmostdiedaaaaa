@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dj7pp52025j7g"]
+
+[ext_resource type="Texture2D" uid="uid://b8ifyomekkvxh" path="res://sophiedragon.png" id="1_wklx4"]
+[ext_resource type="PackedScene" uid="uid://be1khcti21mvm" path="res://objects/dragon.tscn" id="2_1keub"]
+[ext_resource type="PackedScene" uid="uid://ccc4fpdgq0eal" path="res://objects/swordsman.tscn" id="3_vstgw"]
+
+[node name="Cave" type="Node2D" unique_id=1625255188]
+position = Vector2(528, 376)
+scale = Vector2(0.28111434, 0.28111434)
+
+[node name="TempDrag1" type="Sprite2D" parent="." unique_id=381091053]
+position = Vector2(1469.1531, -789.71436)
+scale = Vector2(1.0000007, 1.0000007)
+texture = ExtResource("1_wklx4")
+
+[node name="TempDrag2" type="Sprite2D" parent="." unique_id=1546273560]
+position = Vector2(-1077.8531, -732.7979)
+scale = Vector2(1.0000004, 1.0000004)
+texture = ExtResource("1_wklx4")
+
+[node name="TempDrag3" type="Sprite2D" parent="." unique_id=978918680]
+position = Vector2(-1373.1069, 640.30884)
+scale = Vector2(1.0000013, 1.0000013)
+texture = ExtResource("1_wklx4")
+
+[node name="TempDrag4" type="Sprite2D" parent="." unique_id=2051295166]
+position = Vector2(1671.9177, 505.13257)
+scale = Vector2(1.0000011, 1.0000011)
+texture = ExtResource("1_wklx4")
+
+[node name="Dragon" parent="." unique_id=496728806 instance=ExtResource("2_1keub")]
+
+[node name="Swordsman" parent="." unique_id=600984054 instance=ExtResource("3_vstgw")]
+position = Vector2(1277.0605, -149.40541)
+
+[node name="Swordsman2" parent="." unique_id=757031505 instance=ExtResource("3_vstgw")]
+position = Vector2(597.62164, 160.07722)
+
+[node name="Swordsman3" parent="." unique_id=908738547 instance=ExtResource("3_vstgw")]
+position = Vector2(594.0644, -490.9035)
